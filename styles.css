@@ -1,0 +1,134 @@
+/* Basic Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#app {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;            /* Add this line */
+    flex-direction: column;   /* And this line */
+    gap: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#addTaskButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#addTaskButton:hover {
+    background: #0056b3;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#taskList li input[type="checkbox"] {
+    margin-right: 15px;
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.task-stats {
+    font-size: 0.8rem;
+    color: #888;
+    margin-right: 10px;
+}
+
+.minus-button,
+.delete-button {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.delete-button {
+    color: #ff4d4f;
+    margin-left: 10px;
+}
+
+.minus-button {
+    color: #ffa502;
+}
+
+.minus-button:hover,
+.delete-button:hover {
+    color: #333;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888; 
+}
+
+.missed{
+  color : red;
+  font-style: bold;
+  text-decoration: line-through;
+}
